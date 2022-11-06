@@ -27,5 +27,6 @@ def dashboard(request):
         ministries.append({"name": ministry["name"], "datasets": datasets})
     return render(request,
                   'dashboard/dashboard.html',
-                  {"ministries": ministries}
+                  {"ministries": sorted(ministries, key=lambda x: x["datasets"],
+                                        reverse=True)}
                   )
