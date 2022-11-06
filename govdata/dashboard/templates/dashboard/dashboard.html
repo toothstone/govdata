@@ -12,10 +12,10 @@
     <th>Organization Title</th>
     <th>Datasets</th>
   </tr>
-  {% for org in organizations %}
+  {% for ministry in ministries %}
     <tr>
-    <td>{{ org.title }}</td>
-    <td>{{ org.package_count }}</td>
+    <td>{{ ministry.name }}</td>
+    <td>{{ ministry.datasets }}</td>
     </tr>
   {% endfor %}
 </table>
