@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>GovData Dashboard</title>
+</head>
+<body>
+<h1>GovData Dashboard</h1>
+
+<table>
+  <tr>
+    <th>Organization Title</th>
+    <th>Datasets</th>
+  </tr>
+  {% for org in organizations %}
+    <tr>
+    <td>{{ org.title }}</td>
+    <td>{{ org.datasets }}</td>
+    </tr>
+  {% endfor %}
+</table>
+
+</body>
+</html>
